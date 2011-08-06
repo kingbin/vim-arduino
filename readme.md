@@ -89,6 +89,7 @@ To compile with any args will call make and compile the program.
         :make upload
 
 To generate the template makefile type the following.
+
         :ArduinoMakeFile
 
 You can then double check all the settings at the top of the makefile.
