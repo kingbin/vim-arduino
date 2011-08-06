@@ -11,8 +11,8 @@ MON_CMD = screen
 MON_SPEED = 9600
 
 # Board settings.
-BOARD = diecimila
-PORT = /dev/tty.usbserial-A60061a3
+BOARD = uno
+PORT = /dev/tty.usbmodemfa131
 PROGRAMMER = stk500v1
 
 # Where to find header files and libraries.
@@ -281,7 +281,11 @@ $(IMAGE).hex : $(ARD_AR_OBJ) $(LIB_AR_OBJ) $(SKT_AR_OBJ) $(SKT_PDE_OBJ)
 
 # START:makemods
 upload : all
-	- pkill -f '$(MON_CMD).*$(PORT)'
+#	- pkill -f '$(MON_CMD).*$(PORT)'
+#	- killall -m '$(MON_CMD).*$(PORT)'
+# I'm on a mac and I want to use a default system method of killing the process.
+# This works under my testing on OSx Lion	
+	- ps -ea | grep '$(PORT)' | sed '/grep/d' | awk '{print $$1}' | xargs kill -9 
 	- sleep 1
 	- stty -f $(PORT) hupcl
 	- $(AVRDUDE) -V -C$(AVRDUDE_CONF) -p$(MCU) -c$(PROGRAMMER) \
