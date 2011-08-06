@@ -1,8 +1,11 @@
 
 This project adds [Arduino] support to the vim editor. It handles syntax, compiling and generating a MakeFile.
-Many thanks to [kchmck] I used his readme as a template for this readme.
+Many thanks to [kchmck] for his readme.md on vim-coffee-scipt. I used his readme.md as a template for this readme.
+
+The [Arduino Hacking] article from PragPub got me on this path of creating a vim module. A very interesting read on making a more robust arduino ide.
 
 [Arduino]: http://pragprog.com/magazines/2011-04/create-your-own-arduino-ide
+[Arduino Hacking]: http://pragprog.com/magazines/2011-04/advanced-arduino-hacking
 [kchmck]: https://github.com/kchmck
 
 ### Simple Installation
@@ -74,8 +77,11 @@ Create your file with a pde extension.
 The `<F9>` key compiles the current MakeFile and parses any errors.
 
 To compile with any args will call make and compile the program.
+ 
         :make all
+    
         :make clean
+    
         :make upload
 
 To generate the template makefile type the following.
