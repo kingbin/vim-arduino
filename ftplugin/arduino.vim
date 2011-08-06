@@ -22,7 +22,7 @@ setlocal errorformat^=\%-G../libraries\%.\%#,\%-G../../libraries\%.\%#,%-G/Appli
 " Very simple 
 function! s:ArduinoMakeFile()
   
-  :tabe MakeFileTESTv2
+  :tabe Makefile
   :r ~/.vim/bundle/vim-arduino/templates/Makefile
   :w!
 
