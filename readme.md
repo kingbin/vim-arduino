@@ -1,4 +1,3 @@
-
 This project adds [Arduino] support to the vim editor. It handles syntax, compiling and generating a MakeFile.
 I used [kchmck]'s readme.md as a template for this readme.
 
@@ -66,9 +65,15 @@ cleaner and easier to keep up-to-date.
 
         $ git pull
 
-### Compiling the Current File and Autocompiling
+### Working with an Arduino Project
 
 Ditch the Arduino IDE and start writing your code in vim!
+
+To generate the template makefile type the following.
+
+        :ArduinoMakeFile
+
+You will need to double check the makefile template and update to your settings.
 
 Create your file with a pde extension. 
 
@@ -80,20 +85,17 @@ Make all from a pde file.
 
         :ArduinoMake
 
-To compile with any args will call make and compile the program.
+        :make
+
+other command switches.
  
-        :make all
+        :ArduinoMake all
     
-        :make clean
+        :ArduinoMake clean
     
-        :make upload
+        :ArduinoMake upload
 
-To generate the template makefile type the following.
-
-        :ArduinoMakeFile
-
-You can then double check all the settings at the top of the makefile.
-
+        :ArduinoMake monitor
 
 Again many thanks to all the different parts of work at play here. What I've done is simple. I just wanted a bundle of all the greatness I've been reading in arduino forums.
 
