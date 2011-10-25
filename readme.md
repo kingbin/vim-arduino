@@ -15,11 +15,11 @@ Installing the typical way takes less time, but leaves plugin files scattered.
 
 2. Extract the archive into `~/.vim/`:
 
-        unzip -od ~/.vim vim-coffee-script-HASH.zip
+        unzip -od ~/.vim vim-arduino.zip
 
 These steps are also used to update the plugin.
 
-[zipball]: http://www.vim.org/scripts/script.php?script_id=3590
+[zipball]: http://www.vim.org/scripts/script.php (working on getting the zip to the vim site)
 
 ### Pathogen Installation
 
