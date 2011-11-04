@@ -69,6 +69,27 @@ cleaner and easier to keep up-to-date.
 
 Ditch the Arduino IDE and start writing your code in vim!
 
+You will need to modify the MakeFile to fit your project's needs. I'm building my projects on a osx Lion so you might have to update the upload:all function.
+I tried to make the kill all running monitors piece as generic as possible. I need to come up with a better way to handle these params instead of hardcoded in the MakeFile.
+I do have a method for figuring out what port your arduino is plugged into that I need to merge.
+
+        $ # Your Arduino environment.
+        $ ARD_REV = 22
+        $ ARD_HOME = /Applications/Development/Arduino.app/Contents/Resources/Java
+        $ AVR_HOME = $(ARD_HOME)/hardware/tools/avr
+        $ ARD_BIN = $(AVR_HOME)/bin
+        $ AVRDUDE = $(ARD_BIN)/avrdude
+        $ AVRDUDE_CONF = $(AVR_HOME)/etc/avrdude.conf
+        $ 
+        $ # Your favorite serial monitor.
+        $ MON_CMD = screen
+        $ MON_SPEED = 9600
+        $ 
+        $ # Board settings.
+        $ BOARD = uno
+        $ PORT = /dev/tty.usbmodemfa131
+        $ PROGRAMMER = stk500v1
+
 To generate the template makefile type the following.
 
         :ArduinoMakeFile
