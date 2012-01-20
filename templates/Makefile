@@ -1,5 +1,7 @@
 # Your Arduino environment.
 ARD_REV = 22
+# # For Arduino 1.0
+# ARD_REV = 100
 ARD_HOME = /Applications/Development/Arduino.app/Contents/Resources/Java
 AVR_HOME = $(ARD_HOME)/hardware/tools/avr
 ARD_BIN = $(AVR_HOME)/bin
@@ -14,6 +16,8 @@ MON_SPEED = 9600
 BOARD = uno
 PORT = /dev/tty.usbmodemfa131
 PROGRAMMER = stk500v1
+# # For Arduino 1.0
+# PROGRAMMER = stk500v2
 
 # Where to find header files and libraries.
 INC_DIRS = ./inc
@@ -89,11 +93,15 @@ LIBS =
 
 # Global configuration.
 ARD_REV ?= 0022
+# # For Arduino 1.0
+# ARD_REV ?= 100
 ARD_HOME ?= /Applications/Arduino.app/Contents/Resources/Java
 ARD_BIN ?= /usr/local/CrossPack-AVR/bin
 AVRDUDE ?= $(ARD_HOME)/hardware/tools/avr/bin/avrdude
 AVRDUDE_CONF ?= $(ARD_HOME)/hardware/tools/avr/etc/avrdude.conf
 PROGRAMMER ?= stk500v1
+# # For Arduino 1.0
+# PROGRAMMER ?= stk500v2
 MON_SPEED ?= 57600
 MON_CMD ?= picocom
 PORT ?= /dev/tty.usbserial-A60061a3
