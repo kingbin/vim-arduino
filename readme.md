@@ -9,6 +9,8 @@ The [Arduino Hacking] article from PragPub got me on this path of creating a vim
 
 ### Simple Installation
 
+[![Join the chat at https://gitter.im/kingbin/vim-arduino](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/kingbin/vim-arduino?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Installing the typical way takes less time, but leaves plugin files scattered.
 
 1. Download the latest zipball off this plugin's [vim.org page][zipball].
