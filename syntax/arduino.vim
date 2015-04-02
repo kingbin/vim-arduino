@@ -1,7 +1,7 @@
 " Vim syntax file
 " Language:    Arduino
 " Maintainer:  Johannes Hoff <johannes@johanneshoff.com>
-" Last Change: 06 June 2011
+" Last Change: 06 October 2014
 " License:     VIM license (:help license, replace vim by arduino.vim)
 
 " Syntax highlighting like in the Arduino IDE
@@ -26,6 +26,9 @@ if version < 600
 else
   runtime! syntax/cpp.vim
 endif
+
+" Enable C indentation
+set cindent
 
 syn keyword arduinoConstant  BIN BYTE CHANGE DEC DEFAULT EXTERNAL FALLING HALF_PI
 syn keyword arduinoConstant  HEX HIGH INPUT INTERNAL INTERNAL1V1 INTERNAL2V56
